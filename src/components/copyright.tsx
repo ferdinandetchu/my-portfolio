@@ -10,7 +10,7 @@ export function Copyright() {
   }, []);
 
   return (
-    <p className="text-sm">
+    <p className="text-sm text-muted-foreground">
       © {year} Ferdinand Etchu. All rights reserved.
     </p>
   );

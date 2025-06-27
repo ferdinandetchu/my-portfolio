@@ -380,12 +380,12 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-primary text-primary-foreground mt-auto">
+      <footer className="mt-auto w-full border-t border-border/30 bg-background/80 backdrop-blur-lg">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
           <Copyright />
           <div className="flex items-center gap-4 mt-4 md:mt-0">
               {socialLinks.map(link => (
-                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
                   <link.icon className="h-5 w-5" />
                   <span className="sr-only">{link.name}</span>
                 </a>
