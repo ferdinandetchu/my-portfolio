@@ -107,7 +107,7 @@
   }
 
   .is-animating {
-    animation: animate-gradient 40s linear infinite;
+    animation: animate-gradient 60s linear infinite;
   }
 
   @keyframes animate-gradient {
