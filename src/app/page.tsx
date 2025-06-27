@@ -249,7 +249,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {portfolioProjects.map((project, index) => (
                       <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-card/60 backdrop-blur-md">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-secondary">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
                           </CardHeader>
@@ -277,7 +277,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-card/60 backdrop-blur-md">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-secondary">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
                           </CardHeader>
