@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
+import { AnimatedBackground } from '@/components/animated-background';
 
 const jost = Jost({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en" className={cn("scroll-smooth", jost.variable)} suppressHydrationWarning>
       <head />
       <body className="font-body antialiased" suppressHydrationWarning>
+        <AnimatedBackground />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

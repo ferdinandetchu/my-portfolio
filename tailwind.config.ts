@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundSize: {
+        '400': '400% 400%',
+      },
       fontFamily: {
         body: ['var(--font-jost)', 'sans-serif'],
         headline: ['var(--font-jost)', 'sans-serif'],
@@ -90,6 +93,10 @@ export default {
           'from': { opacity: '0' },
           'to': { opacity: '1' },
         },
+        'animated-gradient': {
+          'from': { 'background-position': '0% 50%' },
+          'to': { 'background-position': '100% 50%' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -97,6 +104,7 @@ export default {
         'infinite-scroll': 'infinite-scroll 40s linear infinite',
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'fade-in': 'fade-in 1s ease-out forwards',
+        'animated-gradient': 'animated-gradient 15s ease infinite alternate',
       },
     },
   },
