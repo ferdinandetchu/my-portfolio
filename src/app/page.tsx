@@ -184,7 +184,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" aria-labelledby="skills-heading" className="py-20 bg-muted/20">
+        <section id="skills" aria-labelledby="skills-heading" className="py-20 bg-muted/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <AnimatedContent>
               <h3 id="skills-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
@@ -202,7 +202,7 @@ export default function Home() {
               >
                 <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
                   {[...skills, ...skills].map((skillCategory, index) => (
-                    <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0">
+                    <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0 bg-card/60 backdrop-blur-md">
                       <CardHeader className="p-0 pb-4">
                         <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
                       </CardHeader>
@@ -228,7 +228,7 @@ export default function Home() {
             </AnimatedContent>
             <AnimatedContent delay={200}>
               <Tabs defaultValue="portfolio" className="w-full">
-                <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+                <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-muted/60 backdrop-blur-md">
                   <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
                   <TabsTrigger value="startup">Startup Projects</TabsTrigger>
                 </TabsList>
@@ -236,7 +236,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {portfolioProjects.map((project, index) => (
                       <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-card/60 backdrop-blur-md">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
                           </CardHeader>
@@ -264,7 +264,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-card/60 backdrop-blur-md">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
                           </CardHeader>
@@ -305,9 +305,9 @@ export default function Home() {
               <div className="space-y-12">
                 {workExperience.map((job, index) => (
                   <AnimatedContent key={index} delay={index * 200}>
-                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 transition-shadow duration-300 md:pl-12">
+                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 transition-shadow duration-300 md:pl-12 bg-card/60 backdrop-blur-md">
                       <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
-                          <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
+                          <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background/80"></div>
                       </div>
                       <div className="flex-shrink-0">
                         <Image src={job.logo} alt={`${job.company} logo`} width={64} height={64} className="rounded-md" data-ai-hint={job.logoHint} />
@@ -355,7 +355,7 @@ export default function Home() {
                   {testimonials.map((testimonial, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="h-full p-1">
-                        <Card className="h-full flex flex-col">
+                        <Card className="h-full flex flex-col bg-card/60 backdrop-blur-md">
                           <CardContent className="pt-6 flex-1 flex flex-col">
                             <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
                             <div className="flex items-center mt-auto">
