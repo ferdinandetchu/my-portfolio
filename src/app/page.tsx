@@ -241,7 +241,7 @@ export default function Home() {
               <h3 id="projects-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">My Work</h3>
             </AnimatedContent>
             <AnimatedContent delay={200}>
-              <Tabs defaultValue="portfolio" className="w-full">
+              <Tabs defaultValue="portfolio" className="w-full max-w-[900px] mx-auto">
                 <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-muted/60 backdrop-blur-md">
                   <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
                   <TabsTrigger value="startup">Startup Projects</TabsTrigger>
