@@ -92,7 +92,7 @@ const testimonials = [
 const skills = [
   {
     category: 'Frontend',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
+    technologies: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
   },
   {
     category: 'Backend',
@@ -100,11 +100,11 @@ const skills = [
   },
   {
     category: 'Databases',
-    technologies: ['MongoDB', 'PostgreSQL', 'Firestore'],
+    technologies: ['MongoDB', 'Firestore'],
   },
   {
     category: 'Tools & DevOps',
-    technologies: ['Git', 'GitHub', 'Docker', 'Vercel', 'Google Cloud'],
+    technologies: ['Git', 'GitHub', 'Vercel', 'Google Cloud', 'Digital Ocean'],
   },
 ];
 
