@@ -78,7 +78,7 @@ const StarRating = ({ rating, totalStars = 5 }: StarRatingProps) => {
   return (
     <div className="flex items-center gap-1">
       {[...Array(totalStars)].map((_, i) => (
-        <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
+        <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-accent text-accent' : 'fill-muted text-muted-foreground'}`} />
       ))}
     </div>
   );
@@ -124,7 +124,7 @@ export default function Home() {
               <span className="font-semibold text-foreground/80">Average Mentoring Rating:</span>
               <div className="flex items-center gap-2">
                 <StarRating rating={5} />
-                <span className="font-bold text-lg text-primary">5.0</span>
+                <span className="font-bold text-lg text-accent">5.0</span>
               </div>
             </div>
           </div>
