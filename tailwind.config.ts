@@ -90,10 +90,6 @@ export default {
           'from': { opacity: '0' },
           'to': { opacity: '1' },
         },
-        'gradient-slow': {
-          '0%, 100%': { 'background-position': '0% 0%' },
-          '50%': { 'background-position': '100% 100%' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -101,10 +97,6 @@ export default {
         'infinite-scroll': 'infinite-scroll 40s linear infinite',
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'fade-in': 'fade-in 1s ease-out forwards',
-        'gradient-slow': 'gradient-slow 15s ease infinite',
-      },
-      backgroundSize: {
-        '400%': '400% 400%',
       },
     },
   },
