@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase, Layers } from 'lucide-react';
 import { AiDescriptionGenerator } from '@/components/ai-description-generator';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Copyright } from '@/components/copyright';
@@ -88,6 +88,25 @@ const testimonials = [
   },
 ];
 
+const skills = [
+  {
+    category: 'Frontend',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
+  },
+  {
+    category: 'Backend',
+    technologies: ['Node.js', 'Express', 'Genkit', 'Firebase'],
+  },
+  {
+    category: 'Databases',
+    technologies: ['MongoDB', 'PostgreSQL', 'Firestore'],
+  },
+  {
+    category: 'Tools & DevOps',
+    technologies: ['Git', 'GitHub', 'Docker', 'Vercel', 'Google Cloud'],
+  },
+];
+
 type StarRatingProps = {
   rating: number;
   totalStars?: number;
@@ -145,6 +164,31 @@ export default function Home() {
                 <StarRating rating={5} />
                 <span className="font-bold text-lg text-accent">5.0</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="py-20 bg-muted/20">
+          <div className="container mx-auto px-4">
+            <h3 className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
+              <Layers className="h-8 w-8" />
+              My Skills & Expertise
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {skills.map((skillCategory) => (
+                <Card key={skillCategory.category} className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardHeader className="p-0 pb-4">
+                    <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="flex flex-wrap gap-2">
+                      {skillCategory.technologies.map((tech) => (
+                        <Badge key={tech} variant="secondary">{tech}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
