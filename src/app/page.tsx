@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Twitter, Star, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase } from 'lucide-react';
 import { AiDescriptionGenerator } from '@/components/ai-description-generator';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Copyright } from '@/components/copyright';
@@ -42,6 +42,25 @@ const startupProjects = [
     link: '#',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'finance dashboard',
+  },
+];
+
+const workExperience = [
+  {
+    company: 'Tech Solutions Inc.',
+    role: 'Senior Software Engineer',
+    duration: 'Jan 2020 - Present',
+    description: 'Led the development of a new client-facing dashboard using React and TypeScript. Improved application performance by 30% and mentored junior developers.',
+    logo: 'https://placehold.co/100x100.png',
+    logoHint: 'company logo',
+  },
+  {
+    company: 'Innovate Co.',
+    role: 'Software Engineer',
+    duration: 'Jun 2018 - Dec 2019',
+    description: 'Developed and maintained features for a large-scale e-commerce platform. Worked with a team of 10 engineers in an agile environment.',
+    logo: 'https://placehold.co/100x100.png',
+    logoHint: 'company logo tech',
   },
 ];
 
@@ -190,6 +209,38 @@ export default function Home() {
                 </div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+
+        <section id="experience" className="py-20 bg-muted/20">
+          <div className="container mx-auto px-4">
+            <h3 className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
+              <Briefcase className="h-8 w-8" />
+              Work Experience
+            </h3>
+            <div className="relative max-w-3xl mx-auto">
+              <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
+              <div className="space-y-12">
+                {workExperience.map((job, index) => (
+                  <Card key={index} className="relative flex flex-col md:flex-row items-start gap-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 md:pl-12">
+                    <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
+                        <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <Image src={job.logo} alt={`${job.company} logo`} width={64} height={64} className="rounded-md" data-ai-hint={job.logoHint} />
+                    </div>
+                    <div className="flex-grow">
+                        <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                          <h4 className="text-xl font-bold font-headline text-primary">{job.company}</h4>
+                          <p className="text-sm text-muted-foreground mt-1 md:mt-0">{job.duration}</p>
+                        </div>
+                        <p className="font-semibold text-foreground/80 mb-2">{job.role}</p>
+                        <p className="text-muted-foreground">{job.description}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
