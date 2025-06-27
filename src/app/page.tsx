@@ -14,6 +14,7 @@ import { BackToTop } from '@/components/back-to-top';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { AnimatedContent } from '@/components/animated-content';
 import { ExperienceCard } from '@/components/experience-card';
+import { ProjectCard } from '@/components/project-card';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -249,26 +250,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {portfolioProjects.map((project, index) => (
                       <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-secondary">
-                          <CardHeader className="p-0">
-                            <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
-                          </CardHeader>
-                          <CardContent className="flex-grow p-6 space-y-4">
-                            <CardTitle className="font-headline">{project.title}</CardTitle>
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
-                            </div>
-                            <CardDescription>{project.description}</CardDescription>
-                          </CardContent>
-                          <CardFooter className="flex justify-between items-center p-4 mt-auto">
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
-                              <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
-                                View Project <ExternalLink className="ml-2 h-4 w-4" />
-                              </Button>
-                            </a>
-                            {index === 0 && <AiDescriptionGenerator projectDetails={project.description} projectName={project.title} />}
-                          </CardFooter>
-                        </Card>
+                        <ProjectCard project={project} showAiGenerator={index === 0} />
                       </AnimatedContent>
                     ))}
                   </div>
@@ -277,25 +259,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full bg-secondary">
-                          <CardHeader className="p-0">
-                            <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
-                          </CardHeader>
-                          <CardContent className="flex-grow p-6 space-y-4">
-                            <CardTitle className="font-headline">{project.title}</CardTitle>
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
-                            </div>
-                            <CardDescription>{project.description}</CardDescription>
-                          </CardContent>
-                          <CardFooter className="p-4 mt-auto">
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
-                              <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
-                                View Project <ExternalLink className="ml-2 h-4 w-4" />
-                              </Button>
-                            </a>
-                          </CardFooter>
-                        </Card>
+                        <ProjectCard project={project} />
                       </AnimatedContent>
                     ))}
                   </div>
