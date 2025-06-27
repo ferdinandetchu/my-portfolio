@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +11,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { Copyright } from '@/components/copyright';
 import { ActionButtons } from '@/components/action-buttons';
 import { BackToTop } from '@/components/back-to-top';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -310,25 +312,39 @@ export default function Home() {
         <section id="testimonials" aria-labelledby="testimonials-heading" className="py-20">
           <div className="container mx-auto px-4">
             <h3 id="testimonials-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">What Mentees Say</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-card shadow-lg">
-                  <CardContent className="pt-6">
-                    <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                    <div className="flex items-center">
-                      <Avatar>
-                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
-                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                      <div className="ml-4">
-                        <p className="font-semibold text-primary">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+            >
+              <CarouselContent className="-ml-4">
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="h-full p-1">
+                      <Card className="h-full flex flex-col bg-card shadow-lg">
+                        <CardContent className="pt-6 flex-1 flex flex-col">
+                          <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
+                          <div className="flex items-center mt-auto">
+                            <Avatar>
+                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
+                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <div className="ml-4">
+                              <p className="font-semibold text-primary">{testimonial.name}</p>
+                              <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
       </main>
@@ -350,3 +366,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
