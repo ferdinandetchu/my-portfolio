@@ -85,9 +85,11 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image:
-      radial-gradient(circle at top left, hsl(var(--accent) / 0.08), transparent 50%),
-      radial-gradient(circle at bottom right, hsl(var(--primary) / 0.1), transparent 50%);
+    /* Animate gradient on scroll */
+    background: linear-gradient(-45deg, hsl(var(--accent) / 0.2), hsl(var(--primary) / 0.2), hsl(var(--accent) / 0.3), hsl(var(--primary) / 0.3));
+    background-size: 100% 300%;
     background-attachment: fixed;
+    background-position-y: var(--scroll-progress, 0%);
+    transition: background-position 0.2s ease-out;
   }
 }
