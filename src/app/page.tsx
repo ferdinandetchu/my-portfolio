@@ -189,21 +189,29 @@ export default function Home() {
               <Layers className="h-8 w-8" />
               My Skills & Expertise
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {skills.map((skillCategory) => (
-                <Card key={skillCategory.category} className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader className="p-0 pb-4">
-                    <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <div className="flex flex-wrap gap-2">
-                      {skillCategory.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary">{tech}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div 
+              className="w-full overflow-hidden relative"
+              style={{
+                maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+                WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+              }}
+            >
+              <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused]">
+                {[...skills, ...skills].map((skillCategory, index) => (
+                  <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0">
+                    <CardHeader className="p-0 pb-4">
+                      <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <div className="flex flex-wrap gap-2">
+                        {skillCategory.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary">{tech}</Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
