@@ -25,7 +25,7 @@ export function ExperienceCard({ job }: ExperienceCardProps) {
       <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
         {/* Front Face */}
         <div className="absolute h-full w-full [backface-visibility:hidden]">
-          <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 md:pl-12 bg-card/60 backdrop-blur-md h-full">
+          <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 md:pl-12 bg-card h-full">
             <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
               <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background/80"></div>
             </div>
@@ -51,7 +51,7 @@ export function ExperienceCard({ job }: ExperienceCardProps) {
 
         {/* Back Face */}
         <div className="absolute h-full w-full [backface-visibility:hidden] [transform:rotateX(180deg)]">
-          <Card className="flex flex-col gap-4 p-6 bg-secondary/80 backdrop-blur-lg h-full overflow-y-auto">
+          <Card className="flex flex-col gap-4 p-6 bg-secondary h-full overflow-y-auto">
             <h4 className="text-lg font-bold font-headline text-primary">Key Contributions & Impact</h4>
             <ul className="space-y-2 text-left list-disc list-inside text-sm text-muted-foreground">
               {job.details.map((detail, i) => (
