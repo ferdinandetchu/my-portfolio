@@ -131,7 +131,7 @@ const StarRating = ({ rating, totalStars = 5 }: StarRatingProps) => {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-body">
-      <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/50 backdrop-blur-lg">
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary font-headline">Ferdinand Etchu</h1>
           <nav>
@@ -382,7 +382,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-primary/80 backdrop-blur-lg text-primary-foreground mt-auto">
+      <footer className="bg-primary text-primary-foreground mt-auto">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
           <Copyright />
           <div className="flex items-center gap-4 mt-4 md:mt-0">
