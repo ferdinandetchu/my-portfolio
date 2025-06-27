@@ -9,7 +9,7 @@ const CalendlyModal = dynamic(() => import('@/components/calendly-modal').then(m
 export function ActionButtons() {
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-      <CalendlyModal url="https://calendly.com/ferdinandetchu">
+      <CalendlyModal url="https://calendly.com/ferdinandetchu/30min">
         <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Calendar className="mr-2 h-5 w-5" />
           Book a Free Consultation

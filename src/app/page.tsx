@@ -167,12 +167,11 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <AnimatedContent animation="fade-in" delay={0}>
               <Image
-                src="https://placehold.co/128x128.png"
+                src="https://images.unsplash.com/photo-1619452220963-4da4e145aba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZnJpY2FuJTIwbWFuJTIwcHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8fHwxNzUxMDYwMTQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Ferdinand Etchu"
                 width={128}
                 height={128}
                 className="rounded-full mb-6 ring-4 ring-primary/20"
-                data-ai-hint="man portrait"
               />
             </AnimatedContent>
             <AnimatedContent animation="fade-in-up" delay={200}>
