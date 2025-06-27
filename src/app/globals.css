@@ -23,8 +23,8 @@
     --muted: 220 15% 90% / 0.5;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 260 85% 65%; /* A vibrant purple */
-    --accent-foreground: 210 40% 98%;
+    --accent: 37 98% 51%; /* #FC9D0B - Orange/Yellow */
+    --accent-foreground: 220 20% 10%; /* Dark color for contrast */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -61,8 +61,8 @@
     --muted: 215 28% 17% / 0.5;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 260 85% 75%; /* Lighter purple for dark mode */
-    --accent-foreground: 210 40% 98%;
+    --accent: 37 98% 60%; /* Lighter Orange/Yellow for dark mode */
+    --accent-foreground: 220 20% 10%; /* Dark color for contrast */
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
