@@ -13,6 +13,7 @@ import { ActionButtons } from '@/components/action-buttons';
 import { BackToTop } from '@/components/back-to-top';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { AnimatedContent } from '@/components/animated-content';
+import { ExperienceCard } from '@/components/experience-card';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -55,9 +56,15 @@ const workExperience = [
     company: 'Tech Solutions Inc.',
     role: 'Senior Software Engineer',
     duration: 'Jan 2020 - Present',
-    description: 'Led the development of a new client-facing dashboard using React and TypeScript. Improved application performance by 30% and mentored junior developers.',
+    description: 'Led the development of a new client-facing dashboard using React and TypeScript, which improved performance and mentored junior developers.',
     logo: 'https://placehold.co/100x100.png',
     logoHint: 'company logo',
+    details: [
+        'Architected and implemented a scalable frontend using React and TypeScript, resulting in a 40% reduction in bug reports.',
+        'Optimized data fetching and state management, which improved application load times by 30% and enhanced user experience.',
+        'Mentored a team of 3 junior developers, fostering their growth and increasing team productivity by 20%.'
+    ],
+    businessImpact: 'The new dashboard directly led to a 15% increase in customer retention by providing clients with actionable insights and a more intuitive interface.'
   },
   {
     company: 'Innovate Co.',
@@ -66,6 +73,12 @@ const workExperience = [
     description: 'Developed and maintained features for a large-scale e-commerce platform. Worked with a team of 10 engineers in an agile environment.',
     logo: 'https://placehold.co/100x100.png',
     logoHint: 'company logo tech',
+    details: [
+        'Implemented new user-facing features using Vue.js, which contributed to a 10% increase in user engagement.',
+        'Collaborated on a database migration project that improved query performance by 25%.',
+        'Wrote comprehensive unit and integration tests, increasing code coverage by 15% and reducing production bugs.'
+    ],
+    businessImpact: 'The features I helped develop were part of a major Q4 release that resulted in a 5% increase in quarterly revenue.'
   },
 ];
 
@@ -304,23 +317,8 @@ export default function Home() {
               <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
               <div className="space-y-12">
                 {workExperience.map((job, index) => (
-                  <AnimatedContent key={index} delay={index * 200}>
-                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 transition-shadow duration-300 md:pl-12 bg-card/60 backdrop-blur-md">
-                      <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
-                          <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background/80"></div>
-                      </div>
-                      <div className="flex-shrink-0">
-                        <Image src={job.logo} alt={`${job.company} logo`} width={64} height={64} className="rounded-md" data-ai-hint={job.logoHint} />
-                      </div>
-                      <div className="flex-grow">
-                          <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                            <h4 className="text-xl font-bold font-headline text-primary">{job.company}</h4>
-                            <p className="text-sm text-muted-foreground mt-1 md:mt-0">{job.duration}</p>
-                          </div>
-                          <p className="font-semibold text-foreground/80 mb-2">{job.role}</p>
-                          <p className="text-muted-foreground">{job.description}</p>
-                      </div>
-                    </Card>
+                  <AnimatedContent key={index} delay={index * 200} className="h-[350px] md:h-[280px]">
+                    <ExperienceCard job={job} />
                   </AnimatedContent>
                 ))}
               </div>
