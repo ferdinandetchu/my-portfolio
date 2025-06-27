@@ -197,7 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" aria-labelledby="skills-heading" className="py-20 bg-muted/50 backdrop-blur-sm">
+        <section id="skills" aria-labelledby="skills-heading" className="py-20 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <AnimatedContent>
               <h3 id="skills-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
