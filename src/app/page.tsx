@@ -131,7 +131,7 @@ const StarRating = ({ rating, totalStars = 5 }: StarRatingProps) => {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-body">
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+      <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/80 backdrop-blur-lg">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary font-headline">Ferdinand Etchu</h1>
           <nav>
@@ -236,7 +236,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {portfolioProjects.map((project, index) => (
                       <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
                           </CardHeader>
@@ -264,7 +264,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
-                        <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                        <Card className="flex flex-col overflow-hidden transition-shadow duration-300 h-full">
                           <CardHeader className="p-0">
                             <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
                           </CardHeader>
@@ -305,7 +305,7 @@ export default function Home() {
               <div className="space-y-12">
                 {workExperience.map((job, index) => (
                   <AnimatedContent key={index} delay={index * 200}>
-                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 md:pl-12">
+                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 transition-shadow duration-300 md:pl-12">
                       <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
                           <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
                       </div>
@@ -355,7 +355,7 @@ export default function Home() {
                   {testimonials.map((testimonial, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="h-full p-1">
-                        <Card className="h-full flex flex-col bg-card shadow-lg">
+                        <Card className="h-full flex flex-col">
                           <CardContent className="pt-6 flex-1 flex flex-col">
                             <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
                             <div className="flex items-center mt-auto">
