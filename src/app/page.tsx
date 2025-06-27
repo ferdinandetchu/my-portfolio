@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Twitter, Star, ExternalLink } from 'lucide-react';
 import { AiDescriptionGenerator } from '@/components/ai-description-generator';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -67,11 +68,15 @@ const testimonials = [
   },
 ];
 
-const StarRating = ({ rating, totalStars }: { rating: number; totalStars?: number }) => {
-  const finalTotalStars = totalStars ?? 5;
+type StarRatingProps = {
+  rating: number;
+  totalStars?: number;
+};
+
+const StarRating = ({ rating, totalStars = 5 }: StarRatingProps) => {
   return (
     <div className="flex items-center gap-1">
-      {[...Array(finalTotalStars)].map((_, i) => (
+      {[...Array(totalStars)].map((_, i) => (
         <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
       ))}
     </div>
@@ -93,6 +98,7 @@ export default function Home() {
                   <span className="sr-only">{link.name}</span>
                 </a>
               ))}
+              <ThemeToggle />
             </div>
           </nav>
         </header>
