@@ -43,7 +43,7 @@
     --background: 222 47% 11% / 0;
     --foreground: 210 40% 98%;
 
-    --card: 223 73% 15% / 1;
+    --card: 240 64% 27% / 1;
     --card-foreground: 210 40% 98%;
 
     --popover: 222 47% 11% / 0.8;
@@ -52,7 +52,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222 47% 11%;
 
-    --secondary: 223 73% 15%; /* #0b1a41 */
+    --secondary: 240 64% 27%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 17%;
