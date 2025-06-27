@@ -40,33 +40,33 @@
   }
 
   .dark {
-    --background: 228 35% 15%; /* Dark Navy Blue */
+    --background: 220 12% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 228 30% 21%; /* Lighter Navy Blue for cards */
+    --card: 220 12% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 228 35% 10%;
+    --popover: 220 12% 5%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 228 35% 15%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 228 30% 25%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 228 30% 25%;
-    --muted-foreground: 227 30% 75%; /* Light grayish blue for descriptions */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 37 98% 60%; /* Lighter Orange/Yellow for dark mode */
-    --accent-foreground: 220 20% 10%; /* Dark color for contrast */
+    --accent: 37 98% 51%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 228 30% 30%;
-    --input: 228 30% 25%;
-    --ring: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 213 90% 65%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
