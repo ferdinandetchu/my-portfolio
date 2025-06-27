@@ -256,7 +256,7 @@ export default function Home() {
                   </div>
                 </TabsContent>
                 <TabsContent value="startup" className="mt-8">
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 gap-8 max-w-xl mx-auto">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
                         <ProjectCard project={project} />
