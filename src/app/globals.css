@@ -107,27 +107,17 @@
   }
 
   .is-animating {
-    animation: animate-gradient 80s linear infinite;
+    animation: animate-gradient 20s ease-in-out infinite;
   }
 
   @keyframes animate-gradient {
-    0% {
-      background-position: 0% 0%;
-    }
-    20% {
-      background-position: 100% 0%;
-    }
-    40% {
-      background-position: 100% 100%;
-    }
-    60% {
+    0%, 100% {
+      background-size: 200% 200%;
       background-position: 50% 50%;
     }
-    80% {
-      background-position: 0% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
+    50% {
+      background-size: 350% 350%;
+      background-position: 50% 50%;
     }
   }
 }
