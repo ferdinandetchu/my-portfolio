@@ -85,27 +85,16 @@
 }
 
 @layer utilities {
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   .animated-gradient {
-    animation: gradient-animation 15s ease infinite;
-    background-size: 400% 400%;
     background-image: radial-gradient(
       circle,
       hsl(var(--primary) / 0.2),
       hsl(var(--secondary) / 0.3),
       hsl(var(--accent) / 0.2)
     );
+    background-size: 200% 200%;
+    background-position: var(--bg-x, 50%) var(--bg-y, 50%);
+    transition: background-position 0.2s ease-out;
   }
 
   .dark .animated-gradient {
