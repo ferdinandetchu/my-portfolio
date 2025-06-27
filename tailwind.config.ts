@@ -91,8 +91,8 @@ export default {
           'to': { opacity: '1' },
         },
         'gradient-slow': {
-          '0%, 100%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
+          '0%, 100%': { 'background-position': '0% 0%' },
+          '50%': { 'background-position': '100% 100%' },
         },
       },
       animation: {
