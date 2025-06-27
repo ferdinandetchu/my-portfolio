@@ -247,7 +247,7 @@ export default function Home() {
                             </div>
                             <CardDescription>{project.description}</CardDescription>
                           </CardContent>
-                          <CardFooter className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
+                          <CardFooter className="flex justify-between items-center p-4 mt-auto">
                             <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
                               <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
                                 View Project <ExternalLink className="ml-2 h-4 w-4" />
@@ -275,7 +275,7 @@ export default function Home() {
                             </div>
                             <CardDescription>{project.description}</CardDescription>
                           </CardContent>
-                          <CardFooter className="bg-muted/50 p-4 mt-auto">
+                          <CardFooter className="p-4 mt-auto">
                             <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
                               <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
                                 View Project <ExternalLink className="ml-2 h-4 w-4" />
@@ -292,7 +292,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" aria-labelledby="experience-heading" className="py-20 bg-muted/20">
+        <section id="experience" aria-labelledby="experience-heading" className="py-20">
           <div className="container mx-auto px-4">
             <AnimatedContent>
               <h3 id="experience-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
