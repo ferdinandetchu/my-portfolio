@@ -11,7 +11,7 @@ export function Copyright() {
 
   return (
     <p className="text-sm">
-      © {year || new Date().getUTCFullYear()} Ferdinand Etchu. All rights reserved.
+      © {year} Ferdinand Etchu. All rights reserved.
     </p>
   );
 }
