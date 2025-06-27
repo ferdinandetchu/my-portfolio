@@ -67,13 +67,16 @@ const testimonials = [
   },
 ];
 
-const StarRating = ({ rating, totalStars = 5 }: { rating: number; totalStars?: number }) => (
-  <div className="flex items-center gap-1">
-    {[...Array(totalStars)].map((_, i) => (
-      <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
-    ))}
-  </div>
-);
+const StarRating = ({ rating, totalStars }: { rating: number; totalStars?: number }) => {
+  const finalTotalStars = totalStars ?? 5;
+  return (
+    <div className="flex items-center gap-1">
+      {[...Array(finalTotalStars)].map((_, i) => (
+        <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
+      ))}
+    </div>
+  );
+};
 
 
 export default function Home() {
@@ -115,7 +118,8 @@ export default function Home() {
                 <span className="font-bold text-lg text-primary">5.0</span>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
         <section id="projects" className="py-16 bg-card/50">
           <div className="container mx-auto px-4">
@@ -208,7 +212,7 @@ export default function Home() {
 
       <footer className="bg-primary text-primary-foreground mt-auto">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Ferdinand Etchu. All rights reserved.</p>
+          <p className="text-sm">© {new Date().getFullYear()} Ferdinand Etchu. All rights reserved.</p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
               {socialLinks.map(link => (
                 <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white transition-colors">
