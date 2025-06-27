@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Github, Linkedin, Twitter, Star, ExternalLink } from 'lucide-react';
 import { AiDescriptionGenerator } from '@/components/ai-description-generator';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { Copyright } from '@/components/copyright';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -220,7 +221,7 @@ export default function Home() {
 
       <footer className="bg-primary/80 backdrop-blur-lg text-primary-foreground mt-auto">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">© {new Date().getFullYear()} Ferdinand Etchu. All rights reserved.</p>
+          <Copyright />
           <div className="flex items-center gap-4 mt-4 md:mt-0">
               {socialLinks.map(link => (
                 <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white transition-colors">
