@@ -86,9 +86,9 @@ const StarRating = ({ rating, totalStars = 5 }: StarRatingProps) => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-body text-foreground">
-      <main className="flex-grow">
-        <header className="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div className="flex flex-col min-h-screen font-body">
+      <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/50 backdrop-blur-lg">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary font-headline">Ferdinand Etchu</h1>
           <nav>
             <div className="flex items-center gap-4">
@@ -101,8 +101,10 @@ export default function Home() {
               <ThemeToggle />
             </div>
           </nav>
-        </header>
-
+        </div>
+      </header>
+      
+      <main className="flex-grow">
         <section className="container mx-auto px-4 py-16 text-center">
           <div className="flex flex-col items-center">
             <Image
@@ -127,7 +129,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-16 bg-card/50">
+        <section id="projects" className="py-16">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-12 font-headline text-primary">My Work</h3>
             <Tabs defaultValue="portfolio" className="w-full">
@@ -216,7 +218,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-primary text-primary-foreground mt-auto">
+      <footer className="bg-primary/80 backdrop-blur-lg text-primary-foreground mt-auto">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">© {new Date().getFullYear()} Ferdinand Etchu. All rights reserved.</p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
