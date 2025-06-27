@@ -12,6 +12,7 @@ import { Copyright } from '@/components/copyright';
 import { ActionButtons } from '@/components/action-buttons';
 import { BackToTop } from '@/components/back-to-top';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { AnimatedContent } from '@/components/animated-content';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -150,201 +151,233 @@ export default function Home() {
       <main className="flex-grow">
         <section className="container mx-auto px-4 py-16 text-center">
           <div className="flex flex-col items-center">
-            <Image
-              src="https://placehold.co/128x128.png"
-              alt="Ferdinand Etchu"
-              width={128}
-              height={128}
-              className="rounded-full mb-6 ring-4 ring-primary/20"
-              data-ai-hint="man portrait"
-            />
-            <h2 className="text-4xl md:text-5xl font-bold font-headline text-primary mb-4">Software Engineer & Mentor</h2>
-            <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
-              Building innovative solutions with modern technology and helping others grow in their tech careers. Passionate about creating startups and mentoring the next generation of developers.
-            </p>
-            <div className="flex items-center justify-center gap-6">
-              <span className="font-semibold text-foreground/80">Average Mentoring Rating:</span>
-              <div className="flex items-center gap-2">
-                <StarRating rating={5} />
-                <span className="font-bold text-lg text-accent">5.0</span>
+            <AnimatedContent animation="fade-in" delay={0}>
+              <Image
+                src="https://placehold.co/128x128.png"
+                alt="Ferdinand Etchu"
+                width={128}
+                height={128}
+                className="rounded-full mb-6 ring-4 ring-primary/20"
+                data-ai-hint="man portrait"
+              />
+            </AnimatedContent>
+            <AnimatedContent animation="fade-in-up" delay={200}>
+              <h2 className="text-4xl md:text-5xl font-bold font-headline text-primary mb-4">Software Engineer & Mentor</h2>
+            </AnimatedContent>
+            <AnimatedContent animation="fade-in-up" delay={400}>
+              <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
+                Building innovative solutions with modern technology and helping others grow in their tech careers. Passionate about creating startups and mentoring the next generation of developers.
+              </p>
+            </AnimatedContent>
+            <AnimatedContent animation="fade-in-up" delay={600}>
+              <div className="flex items-center justify-center gap-6">
+                <span className="font-semibold text-foreground/80">Average Mentoring Rating:</span>
+                <div className="flex items-center gap-2">
+                  <StarRating rating={5} />
+                  <span className="font-bold text-lg text-accent">5.0</span>
+                </div>
               </div>
-            </div>
-            <ActionButtons />
+            </AnimatedContent>
+            <AnimatedContent animation="fade-in-up" delay={800}>
+              <ActionButtons />
+            </AnimatedContent>
           </div>
         </section>
 
         <section id="skills" aria-labelledby="skills-heading" className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
-            <h3 id="skills-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
-              <Layers className="h-8 w-8" aria-hidden="true" />
-              My Skills & Expertise
-            </h3>
-            <div 
-              className="w-full overflow-hidden relative group"
-              style={{
-                maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
-              }}
-            >
-              <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
-                {[...skills, ...skills].map((skillCategory, index) => (
-                  <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0">
-                    <CardHeader className="p-0 pb-4">
-                      <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                      <div className="flex flex-wrap gap-2">
-                        {skillCategory.technologies.map((tech) => (
-                          <Badge key={tech} variant="secondary">{tech}</Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+            <AnimatedContent>
+              <h3 id="skills-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
+                <Layers className="h-8 w-8" aria-hidden="true" />
+                My Skills & Expertise
+              </h3>
+            </AnimatedContent>
+            <AnimatedContent delay={200}>
+              <div 
+                className="w-full overflow-hidden relative group"
+                style={{
+                  maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+                }}
+              >
+                <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
+                  {[...skills, ...skills].map((skillCategory, index) => (
+                    <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0">
+                      <CardHeader className="p-0 pb-4">
+                        <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0">
+                        <div className="flex flex-wrap gap-2">
+                          {skillCategory.technologies.map((tech) => (
+                            <Badge key={tech} variant="secondary">{tech}</Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimatedContent>
           </div>
         </section>
 
         <section id="projects" aria-labelledby="projects-heading" className="py-16">
           <div className="container mx-auto px-4">
-            <h3 id="projects-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">My Work</h3>
-            <Tabs defaultValue="portfolio" className="w-full">
-              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-                <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
-                <TabsTrigger value="startup">Startup Projects</TabsTrigger>
-              </TabsList>
-              <TabsContent value="portfolio" className="mt-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  {portfolioProjects.map((project, index) => (
-                    <Card key={index} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <CardHeader className="p-0">
-                        <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
-                      </CardHeader>
-                      <CardContent className="flex-grow p-6 space-y-4">
-                        <CardTitle className="font-headline">{project.title}</CardTitle>
-                        <div className="flex flex-wrap gap-2">
-                          {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
-                        </div>
-                        <CardDescription>{project.description}</CardDescription>
-                      </CardContent>
-                      <CardFooter className="flex justify-between items-center bg-muted/50 p-4">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
-                          <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
-                            View Project <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
-                        </a>
-                        {index === 0 && <AiDescriptionGenerator projectDetails={project.description} projectName={project.title} />}
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-              <TabsContent value="startup" className="mt-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  {startupProjects.map((project, index) => (
-                    <Card key={index} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <CardHeader className="p-0">
-                        <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
-                      </CardHeader>
-                      <CardContent className="flex-grow p-6 space-y-4">
-                        <CardTitle className="font-headline">{project.title}</CardTitle>
-                        <div className="flex flex-wrap gap-2">
-                          {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
-                        </div>
-                        <CardDescription>{project.description}</CardDescription>
-                      </CardContent>
-                      <CardFooter className="bg-muted/50 p-4">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
-                          <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
-                            View Project <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
-                        </a>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+            <AnimatedContent>
+              <h3 id="projects-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">My Work</h3>
+            </AnimatedContent>
+            <AnimatedContent delay={200}>
+              <Tabs defaultValue="portfolio" className="w-full">
+                <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+                  <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
+                  <TabsTrigger value="startup">Startup Projects</TabsTrigger>
+                </TabsList>
+                <TabsContent value="portfolio" className="mt-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {portfolioProjects.map((project, index) => (
+                      <AnimatedContent key={index} delay={index * 150}>
+                        <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                          <CardHeader className="p-0">
+                            <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint} />
+                          </CardHeader>
+                          <CardContent className="flex-grow p-6 space-y-4">
+                            <CardTitle className="font-headline">{project.title}</CardTitle>
+                            <div className="flex flex-wrap gap-2">
+                              {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+                            </div>
+                            <CardDescription>{project.description}</CardDescription>
+                          </CardContent>
+                          <CardFooter className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
+                              <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
+                                View Project <ExternalLink className="ml-2 h-4 w-4" />
+                              </Button>
+                            </a>
+                            {index === 0 && <AiDescriptionGenerator projectDetails={project.description} projectName={project.title} />}
+                          </CardFooter>
+                        </Card>
+                      </AnimatedContent>
+                    ))}
+                  </div>
+                </TabsContent>
+                <TabsContent value="startup" className="mt-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {startupProjects.map((project, index) => (
+                       <AnimatedContent key={index} delay={index * 150}>
+                        <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                          <CardHeader className="p-0">
+                            <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto object-cover" data-ai-hint={project.imageHint}/>
+                          </CardHeader>
+                          <CardContent className="flex-grow p-6 space-y-4">
+                            <CardTitle className="font-headline">{project.title}</CardTitle>
+                            <div className="flex flex-wrap gap-2">
+                              {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+                            </div>
+                            <CardDescription>{project.description}</CardDescription>
+                          </CardContent>
+                          <CardFooter className="bg-muted/50 p-4 mt-auto">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} (opens in a new tab)`}>
+                              <Button variant="link" className="text-accent p-0 h-auto hover:text-accent/80">
+                                View Project <ExternalLink className="ml-2 h-4 w-4" />
+                              </Button>
+                            </a>
+                          </CardFooter>
+                        </Card>
+                      </AnimatedContent>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </AnimatedContent>
           </div>
         </section>
 
         <section id="experience" aria-labelledby="experience-heading" className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
-            <h3 id="experience-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
-              <Briefcase className="h-8 w-8" aria-hidden="true" />
-              Work Experience
-            </h3>
+            <AnimatedContent>
+              <h3 id="experience-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
+                <Briefcase className="h-8 w-8" aria-hidden="true" />
+                Work Experience
+              </h3>
+            </AnimatedContent>
             <div className="relative max-w-3xl mx-auto">
               <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
               <div className="space-y-12">
                 {workExperience.map((job, index) => (
-                  <Card key={index} className="relative flex flex-col md:flex-row items-start gap-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 md:pl-12">
-                    <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
-                        <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <Image src={job.logo} alt={`${job.company} logo`} width={64} height={64} className="rounded-md" data-ai-hint={job.logoHint} />
-                    </div>
-                    <div className="flex-grow">
-                        <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                          <h4 className="text-xl font-bold font-headline text-primary">{job.company}</h4>
-                          <p className="text-sm text-muted-foreground mt-1 md:mt-0">{job.duration}</p>
-                        </div>
-                        <p className="font-semibold text-foreground/80 mb-2">{job.role}</p>
-                        <p className="text-muted-foreground">{job.description}</p>
-                    </div>
-                  </Card>
+                  <AnimatedContent key={index} delay={index * 200}>
+                    <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 md:pl-12">
+                      <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
+                          <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <Image src={job.logo} alt={`${job.company} logo`} width={64} height={64} className="rounded-md" data-ai-hint={job.logoHint} />
+                      </div>
+                      <div className="flex-grow">
+                          <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                            <h4 className="text-xl font-bold font-headline text-primary">{job.company}</h4>
+                            <p className="text-sm text-muted-foreground mt-1 md:mt-0">{job.duration}</p>
+                          </div>
+                          <p className="font-semibold text-foreground/80 mb-2">{job.role}</p>
+                          <p className="text-muted-foreground">{job.description}</p>
+                      </div>
+                    </Card>
+                  </AnimatedContent>
                 ))}
               </div>
             </div>
-            <div className="mt-12 text-center">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline">
-                      <FileText className="mr-2 h-5 w-5" />
-                      View Full Resume
-                  </Button>
-              </a>
-            </div>
+            <AnimatedContent delay={workExperience.length * 200}>
+              <div className="mt-12 text-center">
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" variant="outline">
+                        <FileText className="mr-2 h-5 w-5" />
+                        View Full Resume
+                    </Button>
+                </a>
+              </div>
+            </AnimatedContent>
           </div>
         </section>
 
         <section id="testimonials" aria-labelledby="testimonials-heading" className="py-20">
           <div className="container mx-auto px-4">
-            <h3 id="testimonials-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">What Mentees Say</h3>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
-            >
-              <CarouselContent className="-ml-4">
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="h-full p-1">
-                      <Card className="h-full flex flex-col bg-card shadow-lg">
-                        <CardContent className="pt-6 flex-1 flex flex-col">
-                          <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                          <div className="flex items-center mt-auto">
-                            <Avatar>
-                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
-                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                            </Avatar>
-                            <div className="ml-4">
-                              <p className="font-semibold text-primary">{testimonial.name}</p>
-                              <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+            <AnimatedContent>
+              <h3 id="testimonials-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary">What Mentees Say</h3>
+            </AnimatedContent>
+            <AnimatedContent delay={200}>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+              >
+                <CarouselContent className="-ml-4">
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                      <div className="h-full p-1">
+                        <Card className="h-full flex flex-col bg-card shadow-lg">
+                          <CardContent className="pt-6 flex-1 flex flex-col">
+                            <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
+                            <div className="flex items-center mt-auto">
+                              <Avatar>
+                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
+                                <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                              </Avatar>
+                              <div className="ml-4">
+                                <p className="font-semibold text-primary">{testimonial.name}</p>
+                                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                              </div>
                             </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </AnimatedContent>
           </div>
         </section>
       </main>
@@ -366,5 +399,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
