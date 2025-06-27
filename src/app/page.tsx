@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase, Layers } from 'lucide-react';
+import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase, Layers, FileText } from 'lucide-react';
 import { AiDescriptionGenerator } from '@/components/ai-description-generator';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Copyright } from '@/components/copyright';
@@ -295,6 +295,14 @@ export default function Home() {
                   </Card>
                 ))}
               </div>
+            </div>
+            <div className="mt-12 text-center">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline">
+                      <FileText className="mr-2 h-5 w-5" />
+                      View Full Resume
+                  </Button>
+              </a>
             </div>
           </div>
         </section>
