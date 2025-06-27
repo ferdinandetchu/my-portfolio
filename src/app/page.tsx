@@ -108,7 +108,7 @@ const skills = [
   },
   {
     category: 'Tools & DevOps',
-    technologies: ['Git', 'GitHub', 'Vercel', 'Google Cloud', 'Digital Ocean'],
+    technologies: ['Git', 'GitHub', 'Vercel', 'Digital Ocean'],
   },
 ];
 
