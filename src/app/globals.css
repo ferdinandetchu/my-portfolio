@@ -43,7 +43,7 @@
     --background: 222 47% 11% / 0;
     --foreground: 210 40% 98%;
 
-    --card: 240 64% 27% / 1;
+    --card: 240 65% 27% / 1;
     --card-foreground: 210 40% 98%;
 
     --popover: 222 47% 11% / 0.8;
@@ -52,7 +52,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222 47% 11%;
 
-    --secondary: 240 64% 27%;
+    --secondary: 240 65% 27%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 17%;
@@ -111,7 +111,8 @@
   }
 
   @keyframes animate-gradient {
-    0%, 100% {
+    0%,
+    100% {
       background-size: 200% 200%;
       background-position: 50% 50%;
     }
