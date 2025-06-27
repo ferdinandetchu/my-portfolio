@@ -213,7 +213,7 @@ export default function Home() {
                   WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
                 }}
               >
-                <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
+                <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] py-4">
                   {[...skills, ...skills].map((skillCategory, index) => (
                     <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0 bg-card/60 backdrop-blur-md">
                       <CardHeader className="p-0 pb-4">
