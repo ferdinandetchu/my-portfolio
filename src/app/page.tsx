@@ -197,7 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" aria-labelledby="skills-heading" className="py-20 backdrop-blur-sm">
+        <section id="skills" aria-labelledby="skills-heading" className="py-20">
           <div className="container mx-auto px-4">
             <AnimatedContent>
               <h3 id="skills-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
@@ -215,7 +215,7 @@ export default function Home() {
               >
                 <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] py-4">
                   {[...skills, ...skills].map((skillCategory, index) => (
-                    <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0 bg-card/60 backdrop-blur-md">
+                    <Card key={`${skillCategory.category}-${index}`} className="p-6 shadow-lg w-[300px] mx-4 shrink-0 bg-secondary">
                       <CardHeader className="p-0 pb-4">
                         <CardTitle className="text-xl font-headline text-primary">{skillCategory.category}</CardTitle>
                       </CardHeader>
@@ -353,7 +353,7 @@ export default function Home() {
                   {testimonials.map((testimonial, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="h-full p-1">
-                        <Card className="h-full flex flex-col bg-card/60 backdrop-blur-md">
+                        <Card className="h-full flex flex-col bg-secondary">
                           <CardContent className="pt-6 flex-1 flex flex-col">
                             <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
                             <div className="flex items-center mt-auto">
