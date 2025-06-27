@@ -25,7 +25,7 @@ export function ExperienceCard({ job }: ExperienceCardProps) {
       <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
         {/* Front Face */}
         <div className="absolute h-full w-full [backface-visibility:hidden]">
-          <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 md:pl-12 bg-card h-full">
+          <Card className="relative flex flex-col md:flex-row items-start gap-6 p-6 md:pl-12 bg-secondary h-full">
             <div className="absolute left-4 top-8 -translate-y-1/2 -translate-x-[calc(50%-1px)] hidden md:block" aria-hidden="true">
               <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background/80"></div>
             </div>
