@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export function Copyright() {
-  const [year, setYear] = useState<number>();
+  const [year, setYear] = useState<number | null>(null);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -11,7 +11,7 @@ export function Copyright() {
 
   return (
     <p className="text-sm">
-      © {year} Ferdinand Etchu. All rights reserved.
+      © {year || new Date().getUTCFullYear()} Ferdinand Etchu. All rights reserved.
     </p>
   );
 }
