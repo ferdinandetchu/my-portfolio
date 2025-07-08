@@ -24,19 +24,19 @@ const socialLinks = [
 
 const portfolioProjects = [
   {
-    title: 'Project Alpha',
+    title: 'Business Consulting Landing ',
     description: 'A web application for task management and team collaboration, built with React and Node.js. Features real-time updates and a customizable dashboard.',
     tags: ['React', 'Node.js', 'Websockets'],
     link: '#',
-    image: 'https://placehold.co/600x400.png',
+    image: '/business_landing.png',
     imageHint: 'abstract tech',
   },
   {
-    title: 'Project Beta',
-    description: 'An e-commerce platform with a custom CMS, focusing on performance and user experience. Integrated with Stripe for payments.',
+    title: 'UB Document Services',
+    description: "Engineered a full-stack Next.js web application (Firebase, Tailwind CSS) for University of Buea, streamlining student transcript and certificate requests. Integrated a Genkit AI chatbot to provide instant answers to user queries, alongside a robust dashboard for administrative request management and communication.",
     tags: ['Vue.js', 'Stripe', 'GraphQL'],
     link: '#',
-    image: 'https://placehold.co/600x400.png',
+    image: '/ubds.png',
     imageHint: 'modern e-commerce',
   },
 ];
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <AnimatedContent animation="fade-in" delay={0}>
               <Image
-                src="https://images.unsplash.com/photo-1619452220963-4da4e145aba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZnJpY2FuJTIwbWFuJTIwcHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8fHwxNzUxMDYwMTQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/Ferdinand.jpg"
                 alt="Ferdinand Etchu"
                 width={128}
                 height={128}
