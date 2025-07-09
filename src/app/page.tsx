@@ -101,9 +101,9 @@ const testimonials = [
     rating: 5,
   },
    {
-    name: 'Alex Johnson',
+    name: 'Chris',
     role: 'Product Manager',
-    quote: "Working with Ferdinand is a pleasure. He has a unique ability to explain complex topics in a simple way, which has been a huge help for our team.",
+    quote: "Etchu is very knowledgeable in HTML, CSS and JavaScript.",
     avatar: 'https://placehold.co/100x100.png',
     avatarHint: 'person portrait',
     rating: 5,
