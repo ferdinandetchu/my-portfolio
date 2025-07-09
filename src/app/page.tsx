@@ -108,6 +108,14 @@ const testimonials = [
     avatarHint: 'person portrait',
     rating: 5,
   },
+  {
+    name: 'Nadia',
+    role: 'Software Developer',
+    quote: "I was struggling for days with a problem i just couldn't figure out, but My tutor managed to identify the issue and helped me solve it step by step. He explained everything in details, making sure i truly understood each part of the process. What impressed me most was his patience and consistency, he stayed with me until we found a solution, and his encouragement kept me motivated. overall, he is an amazing tutor who genuinely cares about his students' progress. Highly recommended!",
+    avatar: 'https://placehold.co/100x100.png',
+    avatarHint: 'woman portrait',
+    rating: 5,
+  },
 ];
 
 const skills = [
