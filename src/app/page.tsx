@@ -88,32 +88,24 @@ const testimonials = [
     name: 'Nadia',
     role: 'Software Developer',
     quote: "I was struggling for days with a problem i just couldn't figure out, but My tutor managed to identify the issue and helped me solve it step by step. He explained everything in details, making sure i truly understood each part of the process. What impressed me most was his patience and consistency, he stayed with me until we found a solution, and his encouragement kept me motivated. overall, he is an amazing tutor who genuinely cares about his students' progress. Highly recommended!",
-    avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'woman portrait',
     rating: 5,
   },
   {
     name: 'Damian',
     role: 'Software Developer',
     quote: "Ferdinand is a fantastic tutor! he helped me with a JavaScript project by teaching me new methods, and made sure i understood the methods that we used to complete the lesson. I strongly recommend tutoring with Ferdinand if you having any web development questions.",
-    avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'man portrait',
     rating: 5,
   },
   {
     name: 'Yaran',
     role: 'Aspiring Developer',
     quote: "Etchu is a great tutor, patient, knowledgeable and proactive. Highly recommended.",
-    avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'person portrait',
     rating: 5,
   },
    {
     name: 'Chris',
     role: 'Product Manager',
     quote: "Etchu is very knowledgeable in HTML, CSS and JavaScript.",
-    avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'person portrait',
     rating: 5,
   },
 ];
@@ -334,7 +326,6 @@ export default function Home() {
                             <p className="text-muted-foreground mt-4 flex-grow italic">"{testimonial.quote}"</p>
                             <div className="flex items-center mt-auto pt-4">
                               <Avatar>
-                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
                                 <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                               </Avatar>
                               <div className="ml-4">
