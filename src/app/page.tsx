@@ -85,11 +85,11 @@ const workExperience = [
 
 const testimonials = [
   {
-    name: 'Jane Doe',
+    name: 'Damian',
     role: 'Software Developer',
-    quote: "Ferdinand's guidance was invaluable. He helped me navigate complex technical challenges and grow my confidence as a developer. Truly a fantastic mentor!",
+    quote: "Ferdinand is a fantastic tutor! he helped me with a JavaScript project by teaching me new methods, and made sure i understood the methods that we used to complete the lesson. I strongly recommend tutoring with Ferdinand if you having any web development questions.",
     avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'woman portrait',
+    avatarHint: 'man portrait',
     rating: 5,
   },
   {
