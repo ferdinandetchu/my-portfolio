@@ -24,9 +24,9 @@ const socialLinks = [
 
 const portfolioProjects = [
   {
-    title: 'Business Consulting Landing ',
-    description: 'A web application for task management and team collaboration, built with React and Node.js. Features real-time updates and a customizable dashboard.',
-    tags: ['React', 'Node.js', 'Websockets'],
+    title: 'Business Consulting Landing',
+    description: 'A modern, responsive landing page for a business consulting firm, designed to attract and convert clients. Built with Next.js and TypeScript, and styled with Tailwind CSS for a clean, professional design.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: '#',
     image: '/business_landing.png',
     imageHint: 'abstract tech',
