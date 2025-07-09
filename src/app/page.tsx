@@ -93,11 +93,11 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: 'John Smith',
+    name: 'Yaran',
     role: 'Aspiring Developer',
-    quote: "I was stuck in a rut before I started mentoring sessions with Ferdinand. His insights and structured approach helped me land my first tech job. Highly recommended!",
+    quote: "Etchu is a great tutor, patient, knowledgeable and proactive. Highly recommended.",
     avatar: 'https://placehold.co/100x100.png',
-    avatarHint: 'man portrait',
+    avatarHint: 'person portrait',
     rating: 5,
   },
    {
