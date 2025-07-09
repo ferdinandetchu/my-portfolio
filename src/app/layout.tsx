@@ -13,7 +13,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: 'Ferdinand Etchu - Software Engineer & Mentor',
+  title: 'Ferdinand Etchu - Software Developer & Mentor',
   description: 'Portfolio of Ferdinand Etchu, showcasing projects, testimonials, and mentoring experience.',
 };
 

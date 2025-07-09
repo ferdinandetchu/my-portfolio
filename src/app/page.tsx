@@ -55,7 +55,7 @@ const startupProjects = [
 const workExperience = [
   {
     company: 'Tech Solutions Inc.',
-    role: 'Senior Software Engineer',
+    role: 'Senior Software Developer',
     duration: 'Jan 2020 - Present',
     description: 'Led the development of a new client-facing dashboard using React and TypeScript, which improved performance and mentored junior developers.',
     logo: 'https://placehold.co/100x100.png',
@@ -69,7 +69,7 @@ const workExperience = [
   },
   {
     company: 'Innovate Co.',
-    role: 'Software Engineer',
+    role: 'Software Developer',
     duration: 'Jun 2018 - Dec 2019',
     description: 'Developed and maintained features for a large-scale e-commerce platform. Worked with a team of 10 engineers in an agile environment.',
     logo: 'https://placehold.co/100x100.png',
@@ -86,7 +86,7 @@ const workExperience = [
 const testimonials = [
   {
     name: 'Jane Doe',
-    role: 'Software Engineer',
+    role: 'Software Developer',
     quote: "Ferdinand's guidance was invaluable. He helped me navigate complex technical challenges and grow my confidence as a developer. Truly a fantastic mentor!",
     avatar: 'https://placehold.co/100x100.png',
     avatarHint: 'woman portrait',
@@ -167,15 +167,16 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <AnimatedContent animation="fade-in" delay={0}>
               <Image
-                src="/Ferdinand.jpg"
+                src="https://images.unsplash.com/photo-1619452220963-4da4e145aba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZnJpY2FuJTIwbWFuJTIwcHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8fHwxNzUxMDYwMTQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Ferdinand Etchu"
                 width={128}
                 height={128}
                 className="rounded-full mb-6 ring-4 ring-primary/20"
+                data-ai-hint="man portrait"
               />
             </AnimatedContent>
             <AnimatedContent animation="fade-in-up" delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold font-headline text-primary mb-4">Software Engineer & Mentor</h2>
+              <h2 className="text-4xl md:text-5xl font-bold font-headline text-primary mb-4">Software Developer & Mentor</h2>
             </AnimatedContent>
             <AnimatedContent animation="fade-in-up" delay={400}>
               <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
