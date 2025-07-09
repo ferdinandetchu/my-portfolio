@@ -90,6 +90,7 @@ const testimonials = [
     quote: "Ferdinand's guidance was invaluable. He helped me navigate complex technical challenges and grow my confidence as a developer. Truly a fantastic mentor!",
     avatar: 'https://placehold.co/100x100.png',
     avatarHint: 'woman portrait',
+    rating: 5,
   },
   {
     name: 'John Smith',
@@ -97,6 +98,7 @@ const testimonials = [
     quote: "I was stuck in a rut before I started mentoring sessions with Ferdinand. His insights and structured approach helped me land my first tech job. Highly recommended!",
     avatar: 'https://placehold.co/100x100.png',
     avatarHint: 'man portrait',
+    rating: 5,
   },
    {
     name: 'Alex Johnson',
@@ -104,6 +106,7 @@ const testimonials = [
     quote: "Working with Ferdinand is a pleasure. He has a unique ability to explain complex topics in a simple way, which has been a huge help for our team.",
     avatar: 'https://placehold.co/100x100.png',
     avatarHint: 'person portrait',
+    rating: 5,
   },
 ];
 
@@ -319,8 +322,9 @@ export default function Home() {
                       <div className="h-full p-1">
                         <Card className="h-full flex flex-col bg-secondary">
                           <CardContent className="pt-6 flex-1 flex flex-col">
-                            <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                            <div className="flex items-center mt-auto">
+                            <StarRating rating={testimonial.rating} />
+                            <p className="text-muted-foreground mt-4 flex-grow italic">"{testimonial.quote}"</p>
+                            <div className="flex items-center mt-auto pt-4">
                               <Avatar>
                                 <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint}/>
                                 <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
