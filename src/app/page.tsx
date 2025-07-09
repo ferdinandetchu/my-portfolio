@@ -104,7 +104,7 @@ const testimonials = [
   },
    {
     name: 'Chris',
-    role: 'Product Manager',
+    role: 'Aspiring Developer',
     quote: "Etchu is very knowledgeable in HTML, CSS and JavaScript.",
     rating: 5,
   },
