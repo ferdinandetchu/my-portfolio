@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
-import { AiDescriptionGenerator } from '@/components/ai-description-generator';
 
 type Project = {
   title: string;
@@ -17,10 +16,9 @@ type Project = {
 
 type ProjectCardProps = {
   project: Project;
-  showAiGenerator?: boolean;
 };
 
-export function ProjectCard({ project, showAiGenerator = false }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="group relative flex flex-col overflow-hidden transition-all duration-300 h-full bg-secondary border-transparent hover:shadow-2xl hover:border-primary/20">
       <CardHeader className="p-0 relative h-48 overflow-hidden">
@@ -49,7 +47,6 @@ export function ProjectCard({ project, showAiGenerator = false }: ProjectCardPro
             View Project <ExternalLink className="ml-2 h-4 w-4" />
           </Button>
         </a>
-        {showAiGenerator && <AiDescriptionGenerator projectDetails={project.description} projectName={project.title} />}
       </CardFooter>
     </Card>
   );

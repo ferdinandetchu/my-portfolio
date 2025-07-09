@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase, Layers, FileText } from 'lucide-react';
-import { AiDescriptionGenerator } from '@/components/ai-description-generator';
+import { Github, Linkedin, Twitter, Star, ExternalLink, Briefcase, Layers, FileText, Code } from 'lucide-react';
+import { AiCodeDebugger } from '@/components/ai-code-debugger';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Copyright } from '@/components/copyright';
 import { ActionButtons } from '@/components/action-buttons';
@@ -35,8 +35,8 @@ const portfolioProjects = [
     title: 'UB Document Services',
     description: "Engineered a full-stack Next.js web application (Firebase, Tailwind CSS) for University of Buea, streamlining student transcript and certificate requests. Integrated a Genkit AI chatbot to provide instant answers to user queries, alongside a robust dashboard for administrative request management and communication.",
     tags: ['Next.js', 'Firebase', 'Tailwind CSS', 'Genkit'],
-    link: '#',
-    image: '/ubds.png',
+    link: 'https://ub-document-services.vercel.app',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'modern e-commerce',
   },
 ];
@@ -253,7 +253,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-8">
                     {portfolioProjects.map((project, index) => (
                       <AnimatedContent key={index} delay={index * 150}>
-                        <ProjectCard project={project} showAiGenerator={index === 0} />
+                        <ProjectCard project={project} />
                       </AnimatedContent>
                     ))}
                   </div>
@@ -268,6 +268,20 @@ export default function Home() {
                   </div>
                 </TabsContent>
               </Tabs>
+            </AnimatedContent>
+          </div>
+        </section>
+
+        <section id="ai-debugger" aria-labelledby="ai-debugger-heading" className="py-20">
+          <div className="container mx-auto px-4">
+            <AnimatedContent>
+              <h3 id="ai-debugger-heading" className="text-3xl font-bold text-center mb-12 font-headline text-primary flex items-center justify-center gap-4">
+                <Code className="h-8 w-8" aria-hidden="true" />
+                AI-Powered Debugging Assistant
+              </h3>
+            </AnimatedContent>
+            <AnimatedContent delay={200}>
+              <AiCodeDebugger />
             </AnimatedContent>
           </div>
         </section>

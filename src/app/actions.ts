@@ -1,28 +1,26 @@
 "use server";
 
-import { generateProjectDescription, GenerateProjectDescriptionInput, GenerateProjectDescriptionOutput } from "@/ai/flows/generate-project-description";
+import { debugCode, DebugCodeInput, DebugCodeOutput } from "@/ai/flows/debug-code";
 import { z } from "zod";
 
 const formSchema = z.object({
-  projectName: z.string(),
-  projectDetails: z.string(),
-  targetAudience: z.string(),
-  desiredTone: z.string(),
+  code: z.string().min(10, { message: 'Please provide some code to analyze.' }),
 });
 
-export async function generateProjectDescriptionAction(
-  input: GenerateProjectDescriptionInput
-): Promise<GenerateProjectDescriptionOutput | { error: string }> {
+export async function debugCodeAction(
+  input: DebugCodeInput
+): Promise<DebugCodeOutput | { error: string }> {
   const validatedInput = formSchema.safeParse(input);
   if (!validatedInput.success) {
-    return { error: "Invalid input." };
+    const issues = validatedInput.error.issues.map(i => i.message).join(' ');
+    return { error: `Invalid input: ${issues}` };
   }
   
   try {
-    const result = await generateProjectDescription(validatedInput.data);
+    const result = await debugCode(validatedInput.data);
     return result;
   } catch (error) {
-    console.error("Error generating project description:", error);
-    return { error: "An unexpected error occurred." };
+    console.error("Error debugging code:", error);
+    return { error: "An unexpected error occurred while analyzing the code." };
   }
 }
