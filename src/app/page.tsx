@@ -34,7 +34,7 @@ const portfolioProjects = [
   {
     title: 'UB Document Services',
     description: "Engineered a full-stack Next.js web application (Firebase, Tailwind CSS) for University of Buea, streamlining student transcript and certificate requests. Integrated a Genkit AI chatbot to provide instant answers to user queries, alongside a robust dashboard for administrative request management and communication.",
-    tags: ['Vue.js', 'Stripe', 'GraphQL'],
+    tags: ['Next.js', 'Firebase', 'Tailwind CSS', 'Genkit'],
     link: '#',
     image: '/ubds.png',
     imageHint: 'modern e-commerce',
