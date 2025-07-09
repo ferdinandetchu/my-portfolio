@@ -27,7 +27,7 @@ const portfolioProjects = [
     title: 'Business Consulting Landing',
     description: 'A modern, responsive landing page for a business consulting firm, designed to attract and convert clients. Built with Next.js and TypeScript, and styled with Tailwind CSS for a clean, professional design.',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    link: '#',
+    link: 'https://business-landing-page-alpha-ashy.vercel.app',
     image: '/business_landing.png',
     imageHint: 'abstract tech',
   },
