@@ -44,8 +44,8 @@ const portfolioProjects = [
 const startupProjects = [
   {
     title: "TimeUp Delivery: Buea's Premier Food Delivery App",
-    description: "As a founder of TimeUp Delivery, I'm spearheading a vital service in Buea, Cameroon, allowing users to effortlessly order from local restaurants and get delicious food delivered. This project leverages Firebase for a scalable backend (Firestore, Auth, Functions, Storage), React Native for a seamless cross-platform web experience flutter for mobile developement, and Google Maps API for real-time tracking, complemented by crucial Mobile Money (MTN MoMo, Orange Money) integrations for local payment processing. Our mission is to make last-mile delivery timely, reliable, affordable, and safe, directly supporting Buea's economy.",
-    tags: ["Firebase", "React Native", "Flutter", "Google Maps API"],
+    description: "As a founder of TimeUp Delivery, I'm spearheading a vital service in Buea, Cameroon, allowing users to effortlessly order from local restaurants and get delicious food delivered. This project leverages Firebase for a scalable backend (Firestore, Auth, Functions, Storage), Next.JS for a seamless cross-platform web experience flutter for mobile developement, and Google Maps API for real-time tracking, complemented by crucial Mobile Money (MTN MoMo, Orange Money) integrations for local payment processing. Our mission is to make last-mile delivery timely, reliable, affordable, and safe, directly supporting Buea's economy.",
+    tags: ["Firebase", "Next.JS", "Flutter", "Google Maps API"],
     link: '#',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'food delivery app',
