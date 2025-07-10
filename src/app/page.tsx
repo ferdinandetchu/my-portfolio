@@ -62,7 +62,7 @@ const startupProjects = [
     title: "PaveWay Business",
     description: "PaveWay Business is a comprehensive business management platform designed to empower businesses with seamless payment collection, meticulous transaction tracking, efficient business item setup, and streamlined delivery management. Co-founded to simplify and optimize core business operations, PaveWay Business provides an intuitive and robust solution for businesses to gain greater control and insight into their finances and inventory. The platform is built using a modern and scalable technology stack, leveraging Nuxt.js for a dynamic and responsive frontend experience, Node.js with Express.js for a powerful and efficient backend API, and MongoDB for flexible and high-performance data storage.",
     tags: ["Nuxt.js", "Node.js", "Express.js", "MongoDB"],
-    link: '#',
+    link: 'https://business-dev.pavewaygroup.com',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'business management',
   },
