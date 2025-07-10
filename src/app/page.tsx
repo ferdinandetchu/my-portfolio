@@ -43,7 +43,7 @@ const portfolioProjects = [
     title: 'Hapi Translation',
     description: 'A responsive and animated landing page for an AI-powered translation service, designed to simplify user access. Built with Next.js, Tailwind CSS, and TypeScript, showcasing the integration of GenKit for intelligent AI translation capabilities.',
     tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Genkit'],
-    link: '#',
+    link: 'https://business-landing-page-o87h.vercel.app',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'translation app',
   },
