@@ -50,6 +50,14 @@ const startupProjects = [
     image: 'https://placehold.co/600x400.png',
     imageHint: 'food delivery app',
   },
+  {
+    title: "PaveWay Business",
+    description: "PaveWay Business is a comprehensive business management platform designed to empower businesses with seamless payment collection, meticulous transaction tracking, efficient business item setup, and streamlined delivery management. Co-founded to simplify and optimize core business operations, PaveWay Business provides an intuitive and robust solution for businesses to gain greater control and insight into their finances and inventory. The platform is built using a modern and scalable technology stack, leveraging Nuxt.js for a dynamic and responsive frontend experience, Node.js with Express.js for a powerful and efficient backend API, and MongoDB for flexible and high-performance data storage.",
+    tags: ["Nuxt.js", "Node.js", "Express.js", "MongoDB"],
+    link: '#',
+    image: 'https://placehold.co/600x400.png',
+    imageHint: 'business management',
+  },
 ];
 
 const workExperience = [
@@ -259,7 +267,7 @@ export default function Home() {
                   </div>
                 </TabsContent>
                 <TabsContent value="startup" className="mt-8">
-                  <div className="grid grid-cols-1 gap-8 max-w-[500px] mx-auto">
+                  <div className="grid md:grid-cols-2 gap-8">
                     {startupProjects.map((project, index) => (
                        <AnimatedContent key={index} delay={index * 150}>
                         <ProjectCard project={project} />
