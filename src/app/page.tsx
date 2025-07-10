@@ -19,7 +19,7 @@ import { ProjectCard } from '@/components/project-card';
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
   { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/ferdinandetchu' },
-  { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/ferdinandetchu' },
+  { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/ferdinand_etchu' },
 ];
 
 const portfolioProjects = [
