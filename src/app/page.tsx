@@ -39,6 +39,14 @@ const portfolioProjects = [
     image: 'https://placehold.co/600x400.png',
     imageHint: 'modern e-commerce',
   },
+   {
+    title: 'Hapi Translation',
+    description: 'A responsive and animated landing page for an AI-powered translation service, designed to simplify user access. Built with Next.js, Tailwind CSS, and TypeScript, showcasing the integration of GenKit for intelligent AI translation capabilities.',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Genkit'],
+    link: '#',
+    image: 'https://placehold.co/600x400.png',
+    imageHint: 'translation app',
+  },
 ];
 
 const startupProjects = [
@@ -386,3 +394,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
