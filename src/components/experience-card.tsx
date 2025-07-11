@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Info } from 'lucide-react';
+import { Info, Link } from 'lucide-react';
 
 // This type definition must match the one in `page.tsx`
 type WorkExperience = {
   company: string;
+  companyLink: string;
   role: string;
   duration: string;
   description: string;
@@ -34,7 +35,15 @@ export function ExperienceCard({ job }: ExperienceCardProps) {
             </div>
             <div className="flex-grow">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                <h4 className="text-xl font-bold font-headline text-primary">{job.company}</h4>
+                <a 
+                  href={job.companyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-bold font-headline text-primary hover:underline hover:text-accent transition-colors flex items-center gap-2"
+                >
+                  {job.company}
+                  <Link className="h-4 w-4 text-muted-foreground" />
+                </a>
                 <p className="text-sm text-muted-foreground mt-1 md:mt-0">{job.duration}</p>
               </div>
               <p className="font-semibold text-foreground/80 mb-2">{job.role}</p>

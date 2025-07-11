@@ -79,6 +79,7 @@ const startupProjects = [
 const workExperience = [
   {
     company: 'Billy Kirts Group (BK Socials)',
+    companyLink: '#',
     role: 'Front End Developer',
     duration: '2023 - 2025',
     description: 'Developed and maintained the landing page, auth page, and user/admin dashboards for the main web application.',
@@ -94,6 +95,7 @@ const workExperience = [
   },
    {
     company: 'PaveWay Academy',
+    companyLink: '#',
     role: 'Front End Development Tutor',
     duration: '2023 - Present',
     description: 'Educating and mentoring aspiring developers in core front-end technologies and best practices.',
