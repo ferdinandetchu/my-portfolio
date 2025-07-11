@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Bot, Code } from 'lucide-react';
+import { Bot, Code, Copy, Check } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,6 +27,44 @@ import { Skeleton } from './ui/skeleton';
 const formSchema = z.object({
   code: z.string().min(10, { message: 'Please enter at least 10 characters of code to analyze.' }),
 });
+
+const CodeBlock = ({ node, inline, className, children, ...props }: any) => {
+    const [isCopied, setIsCopied] = useState(false);
+    const match = /language-(\w+)/.exec(className || '');
+    const codeText = String(children).replace(/\n$/, '');
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(codeText).then(() => {
+            setIsCopied(true);
+            setTimeout(() => setIsCopied(false), 2000);
+        });
+    };
+    
+    return !inline && match ? (
+        <div className="relative">
+            <SyntaxHighlighter
+                style={oneDark}
+                language={match[1]}
+                PreTag="div"
+                {...props}
+            >
+                {codeText}
+            </SyntaxHighlighter>
+            <Button
+                size="icon"
+                variant="ghost"
+                className="absolute top-2 right-2 h-7 w-7 text-white/60 hover:text-white hover:bg-white/10"
+                onClick={handleCopy}
+            >
+                {isCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+            </Button>
+        </div>
+    ) : (
+        <code className={className} {...props}>
+            {children}
+        </code>
+    );
+};
 
 export function AiCodeDebugger() {
   const [analysis, setAnalysis] = useState('');
@@ -109,8 +149,14 @@ export function AiCodeDebugger() {
             </div>
             )}
             {analysis && (
-                <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
-                    <ReactMarkdown>{analysis}</ReactMarkdown>
+                <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground w-full">
+                    <ReactMarkdown
+                        components={{
+                            code: CodeBlock,
+                        }}
+                    >
+                        {analysis}
+                    </ReactMarkdown>
                 </div>
             )}
         </CardFooter>
