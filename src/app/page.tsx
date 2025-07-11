@@ -47,6 +47,14 @@ const portfolioProjects = [
     image: 'https://placehold.co/600x400.png',
     imageHint: 'translation app',
   },
+  {
+    title: 'Real Estate Platform',
+    description: 'Developed a full-stack real estate platform allowing users to browse properties and schedule meetings directly with agents. Features include secure Google authentication and a responsive design built with Next.js, Tailwind CSS, and TypeScript, leveraging Firebase for backend services.',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Firebase'],
+    link: 'https://real-estate-cameroon.vercel.app',
+    image: 'https://placehold.co/600x400.png',
+    imageHint: 'real estate property',
+  },
 ];
 
 const startupProjects = [
