@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -122,9 +123,9 @@ export function AiCodeDebugger() {
                     <FormLabel className="sr-only">Code Input</FormLabel>
                     <FormControl>
                         <Textarea
-                        placeholder="Enter your JavaScript code here..."
-                        className="min-h-[150px] font-code bg-background/50"
-                        {...field}
+                          placeholder="Enter your JavaScript code here..."
+                          className="min-h-[200px] font-code bg-[#282c34] text-gray-300 p-4 rounded-md shadow-inner"
+                          {...field}
                         />
                     </FormControl>
                     <FormMessage />
