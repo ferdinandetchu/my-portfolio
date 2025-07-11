@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Info, Link } from 'lucide-react';
+import { Button } from './ui/button';
 
 // This type definition must match the one in `page.tsx`
 type WorkExperience = {
@@ -70,6 +71,14 @@ export function ExperienceCard({ job }: ExperienceCardProps) {
             <div>
                 <p className="font-semibold text-foreground/90 mt-2">Business Impact:</p>
                 <p className="text-sm text-muted-foreground italic">"{job.businessImpact}"</p>
+            </div>
+            <div className="mt-auto pt-4 text-center">
+                <a href={job.companyLink} target="_blank" rel="noopener noreferrer">
+                    <Button variant="link" size="sm" className="text-accent">
+                        Visit {job.company} Website
+                        <Link className="ml-2 h-4 w-4" />
+                    </Button>
+                </a>
             </div>
           </Card>
         </div>
