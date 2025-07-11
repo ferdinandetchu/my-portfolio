@@ -100,11 +100,11 @@ const workExperience = [
     logo: 'https://placehold.co/100x100.png',
     logoHint: 'online learning',
     details: [
-        'Developed comprehensive curriculum modules and learning resources for practical skill acquisition.',
-        'Covered key areas including responsive design, state management, and modern JavaScript frameworks.',
-        'Provided personalized guidance and code reviews to help students build and deploy web applications.',
+        'Developing comprehensive curriculum modules and learning resources for practical skill acquisition.',
+        'Covering key areas including responsive design, state management, and modern JavaScript frameworks.',
+        'Providing personalized guidance and code reviews to help students build and deploy web applications.',
     ],
-    businessImpact: 'Empowered students to transition into tech careers by providing them with the skills and confidence needed to succeed in the industry.'
+    businessImpact: 'Empowering students to transition into tech careers by providing them with the skills and confidence needed to succeed in the industry.'
   },
 ];
 
