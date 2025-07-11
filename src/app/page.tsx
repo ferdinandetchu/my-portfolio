@@ -78,32 +78,19 @@ const startupProjects = [
 
 const workExperience = [
   {
-    company: 'Tech Solutions Inc.',
-    role: 'Senior Software Developer',
-    duration: 'Jan 2020 - Present',
-    description: 'Led the development of a new client-facing dashboard using React and TypeScript, which improved performance and mentored junior developers.',
+    company: 'Billy Kirts Group (BK Socials)',
+    role: 'Front End Developer',
+    duration: '2023 - 2025',
+    description: 'Developed and maintained the landing page, auth page, and user/admin dashboards for the main web application.',
     logo: 'https://placehold.co/100x100.png',
-    logoHint: 'company logo',
+    logoHint: 'social media tech',
     details: [
-        'Architected and implemented a scalable frontend using React and TypeScript, resulting in a 40% reduction in bug reports.',
-        'Optimized data fetching and state management, which improved application load times by 30% and enhanced user experience.',
-        'Mentored a team of 3 junior developers, fostering their growth and increasing team productivity by 20%.'
+        'Implemented responsive interfaces using Tailwind CSS, Next.js, and Redux, improving user engagement by 50%.',
+        'Collaborated with product designers and backend developers to translate UI/UX designs into pixel-perfect frontend implementations.',
+        'Optimized application performance by 25% through code splitting and lazy loading.',
+        'Contributed to a scalable design system and component library for product consistency.',
     ],
-    businessImpact: 'The new dashboard directly led to a 15% increase in customer retention by providing clients with actionable insights and a more intuitive interface.'
-  },
-  {
-    company: 'Innovate Co.',
-    role: 'Software Developer',
-    duration: 'Jun 2018 - Dec 2019',
-    description: 'Developed and maintained features for a large-scale e-commerce platform. Worked with a team of 10 engineers in an agile environment.',
-    logo: 'https://placehold.co/100x100.png',
-    logoHint: 'company logo tech',
-    details: [
-        'Implemented new user-facing features using Vue.js, which contributed to a 10% increase in user engagement.',
-        'Collaborated on a database migration project that improved query performance by 25%.',
-        'Wrote comprehensive unit and integration tests, increasing code coverage by 15% and reducing production bugs.'
-    ],
-    businessImpact: 'The features I helped develop were part of a major Q4 release that resulted in a 5% increase in quarterly revenue.'
+    businessImpact: 'Advised management on implementing API-driven automatic boosting and account sales, which increased sales by 70%.'
   },
 ];
 
