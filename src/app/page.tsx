@@ -15,6 +15,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { AnimatedContent } from '@/components/animated-content';
 import { ExperienceCard } from '@/components/experience-card';
 import { ProjectCard } from '@/components/project-card';
+import { TestimonialCard } from '@/components/testimonial-card';
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/ferdinandetchu' },
@@ -357,26 +358,10 @@ export default function Home() {
                 }}
                 className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
               >
-                <CarouselContent className="-ml-4">
+                <CarouselContent className="-ml-4 py-4">
                   {testimonials.map((testimonial, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                      <div className="h-full p-1">
-                        <Card className="h-full flex flex-col bg-secondary">
-                          <CardContent className="pt-6 flex-1 flex flex-col">
-                            <StarRating rating={testimonial.rating} />
-                            <p className="text-muted-foreground mt-4 flex-grow italic">"{testimonial.quote}"</p>
-                            <div className="flex items-center mt-auto pt-4">
-                              <Avatar>
-                                <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                              </Avatar>
-                              <div className="ml-4">
-                                <p className="font-semibold text-primary">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                              </div>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
+                      <TestimonialCard testimonial={testimonial} />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -405,7 +390,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
