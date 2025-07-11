@@ -37,7 +37,7 @@ const portfolioProjects = [
     description: "Engineered a full-stack Next.js web application (Firebase, Tailwind CSS) for University of Buea, streamlining student transcript and certificate requests. Integrated a Genkit AI chatbot to provide instant answers to user queries, alongside a robust dashboard for administrative request management and communication.",
     tags: ['Next.js', 'Firebase', 'Tailwind CSS', 'Genkit'],
     link: 'https://ub-document-services.vercel.app',
-    image: 'https://placehold.co/600x400.png',
+    image: '/ubds.png',
     imageHint: 'modern e-commerce',
   },
    {
@@ -45,7 +45,7 @@ const portfolioProjects = [
     description: 'A responsive and animated landing page for an AI-powered translation service, designed to simplify user access. Built with Next.js, Tailwind CSS, and TypeScript, showcasing the integration of GenKit for intelligent AI translation capabilities.',
     tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Genkit'],
     link: 'https://business-landing-page-o87h.vercel.app',
-    image: 'https://placehold.co/600x400.png',
+    image: '/hip_trans.png',
     imageHint: 'translation app',
   },
   {
@@ -53,7 +53,7 @@ const portfolioProjects = [
     description: 'Developed a full-stack real estate platform allowing users to browse properties and schedule meetings directly with agents. Features include secure Google authentication and a responsive design built with Next.js, Tailwind CSS, and TypeScript, leveraging Firebase for backend services.',
     tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Firebase'],
     link: 'https://real-estate-cameroon.vercel.app',
-    image: 'https://placehold.co/600x400.png',
+    image: '/real_estate.png',
     imageHint: 'real estate property',
   },
 ];
@@ -64,7 +64,7 @@ const startupProjects = [
     description: "As a founder of TimeUp Delivery, I'm spearheading a vital service in Buea, Cameroon, allowing users to effortlessly order from local restaurants and get delicious food delivered. This project leverages Firebase for a scalable backend (Firestore, Auth, Functions, Storage), Next.JS for a seamless cross-platform web experience flutter for mobile developement, and Google Maps API for real-time tracking, complemented by crucial Mobile Money (MTN MoMo, Orange Money) integrations for local payment processing. Our mission is to make last-mile delivery timely, reliable, affordable, and safe, directly supporting Buea's economy.",
     tags: ["Firebase", "Next.JS", "Flutter", "Google Maps API"],
     link: '#',
-    image: 'https://placehold.co/600x400.png',
+    image: '/timeup_delivery.png',
     imageHint: 'food delivery app',
   },
   {
@@ -72,7 +72,7 @@ const startupProjects = [
     description: "PaveWay Business is a comprehensive business management platform designed to empower businesses with seamless payment collection, meticulous transaction tracking, efficient business item setup, and streamlined delivery management. Co-founded to simplify and optimize core business operations, PaveWay Business provides an intuitive and robust solution for businesses to gain greater control and insight into their finances and inventory. The platform is built using a modern and scalable technology stack, leveraging Nuxt.js for a dynamic and responsive frontend experience, Node.js with Express.js for a powerful and efficient backend API, and MongoDB for flexible and high-performance data storage.",
     tags: ["Nuxt.js", "Node.js", "Express.js", "MongoDB"],
     link: 'https://business-dev.pavewaygroup.com',
-    image: 'https://placehold.co/600x400.png',
+    image: '/paveway_business.png',
     imageHint: 'business management',
   },
 ];
@@ -84,7 +84,7 @@ const workExperience = [
     role: 'Front End Developer',
     duration: '2023 - 2025',
     description: 'Developed and maintained the landing page, auth page, and user/admin dashboards for the main web application.',
-    logo: 'https://placehold.co/100x100.png',
+    logo: '/billy_kirts_grooup.jpg',
     logoHint: 'social media tech',
     details: [
         'Implemented responsive interfaces using Tailwind CSS, Next.js, and Redux, improving user engagement by 50%.',
@@ -100,7 +100,7 @@ const workExperience = [
     role: 'Front End Development Tutor',
     duration: '2020 - Present',
     description: 'Educating and mentoring aspiring developers in core front-end technologies and best practices.',
-    logo: 'https://placehold.co/100x100.png',
+    logo: '/paveway_academy.jpg',
     logoHint: 'online learning',
     details: [
         'Developing comprehensive curriculum modules and learning resources for practical skill acquisition.',
@@ -198,7 +198,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <AnimatedContent animation="fade-in" delay={0}>
               <Image
-                src="https://images.unsplash.com/photo-1619452220963-4da4e145aba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZnJpY2FuJTIwbWFuJTIwcHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8fHwxNzUxMDYwMTQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/Ferdinand.jpg"
                 alt="Ferdinand Etchu"
                 width={128}
                 height={128}
