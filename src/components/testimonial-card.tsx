@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -48,13 +49,13 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
                   <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 </div>
               </div>
+               <div className="flex justify-end mt-4">
+                  <Badge variant="outline" className="animate-pulse bg-accent/20 border-accent/30 text-accent-foreground/80">
+                      <Info className="mr-2 h-4 w-4" />
+                      Hover to read
+                  </Badge>
+              </div>
             </CardContent>
-             <div className="absolute bottom-4 right-4">
-                <Badge variant="outline" className="animate-pulse bg-accent/20 border-accent/30 text-accent-foreground/80">
-                    <Info className="mr-2 h-4 w-4" />
-                    Hover to read
-                </Badge>
-            </div>
           </Card>
         </div>
 
