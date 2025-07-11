@@ -79,7 +79,7 @@ const startupProjects = [
 const workExperience = [
   {
     company: 'Billy Kirts Group (BK Socials)',
-    companyLink: '#',
+    companyLink: 'http://socials.billycorp.com',
     role: 'Front End Developer',
     duration: '2023 - 2025',
     description: 'Developed and maintained the landing page, auth page, and user/admin dashboards for the main web application.',
