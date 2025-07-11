@@ -98,7 +98,7 @@ const workExperience = [
     company: 'PaveWay Academy',
     companyLink: 'https://academy.pavewaygroup.com',
     role: 'Front End Development Tutor',
-    duration: '2023 - Present',
+    duration: '2020 - Present',
     description: 'Educating and mentoring aspiring developers in core front-end technologies and best practices.',
     logo: 'https://placehold.co/100x100.png',
     logoHint: 'online learning',
