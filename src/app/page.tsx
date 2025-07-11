@@ -92,6 +92,20 @@ const workExperience = [
     ],
     businessImpact: 'Advised management on implementing API-driven automatic boosting and account sales, which increased sales by 70%.'
   },
+   {
+    company: 'PaveWay Academy',
+    role: 'Front End Development Tutor',
+    duration: '2023 - Present',
+    description: 'Educating and mentoring aspiring developers in core front-end technologies and best practices.',
+    logo: 'https://placehold.co/100x100.png',
+    logoHint: 'online learning',
+    details: [
+        'Developed comprehensive curriculum modules and learning resources for practical skill acquisition.',
+        'Covered key areas including responsive design, state management, and modern JavaScript frameworks.',
+        'Provided personalized guidance and code reviews to help students build and deploy web applications.',
+    ],
+    businessImpact: 'Empowered students to transition into tech careers by providing them with the skills and confidence needed to succeed in the industry.'
+  },
 ];
 
 const testimonials = [
